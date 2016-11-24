@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{00700213-09C8-4D01-A773-35541229A6CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StardewValley</RootNamespace>
+    <AssemblyName>Stardew Valley</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ApplicationIcon>Stardew Valley.ico</ApplicationIcon>
+    <StartupObject>StardewValley.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="xTile">
+      <HintPath>D:\Games\Stardew Valley\xTile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Lidgren.Network">
+      <HintPath>D:\Games\Stardew Valley\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.Xna.Framework.Xact" />
+    <Reference Include="Steamworks.NET" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="GalaxyCSharp">
+      <HintPath>D:\Games\Stardew Valley\GalaxyCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimalHouse.cs" />
+    <Compile Include="AnimatedSprite.cs" />
+    <Compile Include="Background.cs" />
+    <Compile Include="BarnDweller.cs" />
+    <Compile Include="BatTemporarySprite.cs" />
+    <Compile Include="BellsAndWhistles\AmbientLocationSounds.cs" />
+    <Compile Include="BellsAndWhistles\Birdie.cs" />
+    <Compile Include="BellsAndWhistles\Butterfly.cs" />
+    <Compile Include="BellsAndWhistles\Cloud.cs" />
+    <Compile Include="BellsAndWhistles\Critter.cs" />
+    <Compile Include="BellsAndWhistles\Crow.cs" />
+    <Compile Include="BellsAndWhistles\EmilysParrot.cs" />
+    <Compile Include="BellsAndWhistles\Firefly.cs" />
+    <Compile Include="BellsAndWhistles\Frog.cs" />
+    <Compile Include="BellsAndWhistles\Lexicon.cs" />
+    <Compile Include="BellsAndWhistles\MoneyDial.cs" />
+    <Compile Include="BellsAndWhistles\Owl.cs" />
+    <Compile Include="BellsAndWhistles\Rabbit.cs" />
+    <Compile Include="BellsAndWhistles\ScreenSwipe.cs" />
+    <Compile Include="BellsAndWhistles\Seagull.cs" />
+    <Compile Include="BellsAndWhistles\SparklingText.cs" />
+    <Compile Include="BellsAndWhistles\SpriteText.cs" />
+    <Compile Include="BellsAndWhistles\Squirrel.cs" />
+    <Compile Include="BellsAndWhistles\Train.cs" />
+    <Compile Include="BellsAndWhistles\TrainCar.cs" />
+    <Compile Include="BellsAndWhistles\Woodpecker.cs" />
+    <Compile Include="BloomComponent.cs" />
+    <Compile Include="BloomSettings.cs" />
+    <Compile Include="BluePrint.cs" />
+    <Compile Include="Buff.cs" />
+    <Compile Include="Buildings\Barn.cs" />
+    <Compile Include="Buildings\Building.cs" />
+    <Compile Include="Buildings\Coop.cs" />
+    <Compile Include="Buildings\JunimoHut.cs" />
+    <Compile Include="Buildings\Mill.cs" />
+    <Compile Include="Buildings\Stable.cs" />
+    <Compile Include="BuildingUpgrade.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="CharacterEventArgs.cs" />
+    <Compile Include="Characters\Cat.cs" />
+    <Compile Include="Characters\Child.cs" />
+    <Compile Include="Characters\Dog.cs" />
+    <Compile Include="Characters\Horse.cs" />
+    <Compile Include="Characters\Junimo.cs" />
+    <Compile Include="Characters\JunimoHarvester.cs" />
+    <Compile Include="Characters\Pet.cs" />
+    <Compile Include="CharEnteredHandler.cs" />
+    <Compile Include="Chunk.cs" />
+    <Compile Include="ColorChanger.cs" />
+    <Compile Include="CoopDweller.cs" />
+    <Compile Include="CosmeticDebris.cs" />
+    <Compile Include="CraftingRecipe.cs" />
+    <Compile Include="Crop.cs" />
+    <Compile Include="Debris.cs" />
+    <Compile Include="DelayedAction.cs" />
+    <Compile Include="Dialogue.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Events\BirthingEvent.cs" />
+    <Compile Include="Events\DiaryEvent.cs" />
+    <Compile Include="Events\FairyEvent.cs" />
+    <Compile Include="Events\FarmEvent.cs" />
+    <Compile Include="Events\QuestionEvent.cs" />
+    <Compile Include="Events\SoundInTheNightEvent.cs" />
+    <Compile Include="Events\WitchEvent.cs" />
+    <Compile Include="Events\WorldChangeEvent.cs" />
+    <Compile Include="Farm.cs" />
+    <Compile Include="FarmAnimal.cs" />
+    <Compile Include="Farmer.cs" />
+    <Compile Include="FarmerRenderer.cs" />
+    <Compile Include="FarmerSprite.cs" />
+    <Compile Include="Fence.cs" />
+    <Compile Include="FrameRateCounter.cs" />
+    <Compile Include="FurniturePlacer.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="GameLocation.cs" />
+    <Compile Include="GOGHelper.cs" />
+    <Compile Include="HUDMessage.cs" />
+    <Compile Include="IKeyboardSubscriber.cs" />
+    <Compile Include="InputButton.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="KeyboardDispatcher.cs" />
+    <Compile Include="KeyboardInput.cs" />
+    <Compile Include="KeyboardLayout.cs" />
+    <Compile Include="KeyEventArgs.cs" />
+    <Compile Include="KeyEventHandler.cs" />
+    <Compile Include="LevelBuilder.cs" />
+    <Compile Include="LightSource.cs" />
+    <Compile Include="LivestockSprite.cs" />
+    <Compile Include="LoadGameScreen.cs" />
+    <Compile Include="LocalizedContentManager.cs" />
+    <Compile Include="Locations\AdventureGuild.cs" />
+    <Compile Include="Locations\BathHousePool.cs" />
+    <Compile Include="Locations\Beach.cs" />
+    <Compile Include="Locations\BuildableGameLocation.cs" />
+    <Compile Include="Locations\Bus.cs" />
+    <Compile Include="Locations\BusStop.cs" />
+    <Compile Include="Locations\Cellar.cs" />
+    <Compile Include="Locations\Club.cs" />
+    <Compile Include="Locations\CommunityCenter.cs" />
+    <Compile Include="Locations\DecoratableLocation.cs" />
+    <Compile Include="Locations\Desert.cs" />
+    <Compile Include="Locations\FarmCave.cs" />
+    <Compile Include="Locations\FarmHouse.cs" />
+    <Compile Include="Locations\Forest.cs" />
+    <Compile Include="Locations\JojaMart.cs" />
+    <Compile Include="Locations\LibraryMuseum.cs" />
+    <Compile Include="Locations\MineInfo.cs" />
+    <Compile Include="Locations\MineShaft.cs" />
+    <Compile Include="Locations\Mountain.cs" />
+    <Compile Include="Locations\Railroad.cs" />
+    <Compile Include="Locations\SeedShop.cs" />
+    <Compile Include="Locations\Sewer.cs" />
+    <Compile Include="Locations\Summit.cs" />
+    <Compile Include="Locations\Town.cs" />
+    <Compile Include="Locations\WizardHouse.cs" />
+    <Compile Include="Locations\Woods.cs" />
+    <Compile Include="Menus\AboutMenu.cs" />
+    <Compile Include="Menus\AddNewItemMenu.cs" />
+    <Compile Include="Menus\AnimalQueryMenu.cs" />
+    <Compile Include="Menus\Billboard.cs" />
+    <Compile Include="Menus\BlueprintsMenu.cs" />
+    <Compile Include="Menus\BobberBar.cs" />
+    <Compile Include="Menus\BuffsDisplay.cs" />
+    <Compile Include="Menus\Bundle.cs" />
+    <Compile Include="Menus\BundleIngredientDescription.cs" />
+    <Compile Include="Menus\ButtonTutorialMenu.cs" />
+    <Compile Include="Menus\CarpenterMenu.cs" />
+    <Compile Include="Menus\CataloguePage.cs" />
+    <Compile Include="Menus\CharacterCustomization.cs" />
+    <Compile Include="Menus\ChatBox.cs" />
+    <Compile Include="Menus\ChatMessage.cs" />
+    <Compile Include="Menus\ChooseFromListMenu.cs" />
+    <Compile Include="Menus\ClickableAnimatedComponent.cs" />
+    <Compile Include="Menus\ClickableComponent.cs" />
+    <Compile Include="Menus\ClickableTextureComponent.cs" />
+    <Compile Include="Menus\CollectionsPage.cs" />
+    <Compile Include="Menus\ColorPicker.cs" />
+    <Compile Include="Menus\ConfirmationDialog.cs" />
+    <Compile Include="Menus\CooperativeMenu.cs" />
+    <Compile Include="Menus\CraftingPage.cs" />
+    <Compile Include="Menus\DayTimeMoneyBox.cs" />
+    <Compile Include="Menus\DebugInputMenu.cs" />
+    <Compile Include="Menus\DialogueBox.cs" />
+    <Compile Include="Menus\DiscreteColorPicker.cs" />
+    <Compile Include="Menus\ExitPage.cs" />
+    <Compile Include="Menus\FarmInfoPage.cs" />
+    <Compile Include="Menus\Fish.cs" />
+    <Compile Include="Menus\GameMenu.cs" />
+    <Compile Include="Menus\GeodeMenu.cs" />
+    <Compile Include="Menus\IClickableMenu.cs" />
+    <Compile Include="Menus\InventoryMenu.cs" />
+    <Compile Include="Menus\InventoryPage.cs" />
+    <Compile Include="Menus\ItemGrabMenu.cs" />
+    <Compile Include="Menus\JojaCDMenu.cs" />
+    <Compile Include="Menus\JunimoNoteMenu.cs" />
+    <Compile Include="Menus\LetterViewerMenu.cs" />
+    <Compile Include="Menus\LevelUpMenu.cs" />
+    <Compile Include="Menus\LoadGameMenu.cs" />
+    <Compile Include="Menus\MapPage.cs" />
+    <Compile Include="Menus\MenuHUDButtons.cs" />
+    <Compile Include="Menus\MenuWithInventory.cs" />
+    <Compile Include="Menus\MineElevatorMenu.cs" />
+    <Compile Include="Menus\MiniatureTerrainFeature.cs" />
+    <Compile Include="Menus\MuseumMenu.cs" />
+    <Compile Include="Menus\NamingMenu.cs" />
+    <Compile Include="Menus\NumberSelectionMenu.cs" />
+    <Compile Include="Menus\OptionsCheckbox.cs" />
+    <Compile Include="Menus\OptionsDropDown.cs" />
+    <Compile Include="Menus\OptionsElement.cs" />
+    <Compile Include="Menus\OptionsInputListener.cs" />
+    <Compile Include="Menus\OptionsPage.cs" />
+    <Compile Include="Menus\OptionsPlusMinus.cs" />
+    <Compile Include="Menus\OptionsSlider.cs" />
+    <Compile Include="Menus\PurchaseAnimalsMenu.cs" />
+    <Compile Include="Menus\QuestLog.cs" />
+    <Compile Include="Menus\SaveGameMenu.cs" />
+    <Compile Include="Menus\ShippingMenu.cs" />
+    <Compile Include="Menus\ShopMenu.cs" />
+    <Compile Include="Menus\SkillsPage.cs" />
+    <Compile Include="Menus\SliderBar.cs" />
+    <Compile Include="Menus\SocialPage.cs" />
+    <Compile Include="Menus\StorageContainer.cs" />
+    <Compile Include="Menus\StrengthGame.cs" />
+    <Compile Include="Menus\TextBox.cs" />
+    <Compile Include="Menus\TextBoxEvent.cs" />
+    <Compile Include="Menus\TitleMenu.cs" />
+    <Compile Include="Menus\TitleScreenMenu.cs" />
+    <Compile Include="Menus\Toolbar.cs" />
+    <Compile Include="Menus\TutorialMenu.cs" />
+    <Compile Include="Menus\WheelSpinGame.cs" />
+    <Compile Include="Minigames\AbigailGame.cs" />
+    <Compile Include="Minigames\CalicoJack.cs" />
+    <Compile Include="Minigames\FantasyBoardGame.cs" />
+    <Compile Include="Minigames\FishingGame.cs" />
+    <Compile Include="Minigames\GrandpaStory.cs" />
+    <Compile Include="Minigames\HaleyCowPictures.cs" />
+    <Compile Include="Minigames\IMinigame.cs" />
+    <Compile Include="Minigames\Intro.cs" />
+    <Compile Include="Minigames\MineCart.cs" />
+    <Compile Include="Minigames\ParallaxBG.cs" />
+    <Compile Include="Minigames\PlaneFlyBy.cs" />
+    <Compile Include="Minigames\RobotBlastoff.cs" />
+    <Compile Include="Minigames\Slots.cs" />
+    <Compile Include="Minigames\TargetGame.cs" />
+    <Compile Include="Minigames\TelescopeScene.cs" />
+    <Compile Include="Minigames\Test.cs" />
+    <Compile Include="MoneyMadeScreen.cs" />
+    <Compile Include="Monsters\Bat.cs" />
+    <Compile Include="Monsters\BigSlime.cs" />
+    <Compile Include="Monsters\Bug.cs" />
+    <Compile Include="Monsters\Cat.cs" />
+    <Compile Include="Monsters\Crow.cs" />
+    <Compile Include="Monsters\Duggy.cs" />
+    <Compile Include="Monsters\DustSpirit.cs" />
+    <Compile Include="Monsters\Fireball.cs" />
+    <Compile Include="Monsters\Fly.cs" />
+    <Compile Include="Monsters\Ghost.cs" />
+    <Compile Include="Monsters\GoblinPeasant.cs" />
+    <Compile Include="Monsters\GoblinWizard.cs" />
+    <Compile Include="Monsters\GreenSlime.cs" />
+    <Compile Include="Monsters\Grub.cs" />
+    <Compile Include="Monsters\LavaCrab.cs" />
+    <Compile Include="Monsters\MetalHead.cs" />
+    <Compile Include="Monsters\Monster.cs" />
+    <Compile Include="Monsters\Mummy.cs" />
+    <Compile Include="Monsters\RockCrab.cs" />
+    <Compile Include="Monsters\RockGolem.cs" />
+    <Compile Include="Monsters\Serpent.cs" />
+    <Compile Include="Monsters\ShadowBrute.cs" />
+    <Compile Include="Monsters\ShadowGirl.cs" />
+    <Compile Include="Monsters\ShadowGuy.cs" />
+    <Compile Include="Monsters\ShadowShaman.cs" />
+    <Compile Include="Monsters\Skeleton.cs" />
+    <Compile Include="Monsters\SkeletonMage.cs" />
+    <Compile Include="Monsters\SkeletonWarrior.cs" />
+    <Compile Include="Monsters\Spiker.cs" />
+    <Compile Include="Monsters\SquidKid.cs" />
+    <Compile Include="MultiplayerUtility.cs" />
+    <Compile Include="NameSelect.cs" />
+    <Compile Include="Network\AsynchronousSocketListener.cs" />
+    <Compile Include="Network\Client.cs" />
+    <Compile Include="Network\GetMapClient.cs" />
+    <Compile Include="Network\GetMapService.cs" />
+    <Compile Include="Network\IGetMapService.cs" />
+    <Compile Include="Network\LidgrenClient.cs" />
+    <Compile Include="Network\LidgrenServer.cs" />
+    <Compile Include="Network\Server.cs" />
+    <Compile Include="Network\StateObject.cs" />
+    <Compile Include="Noise.cs" />
+    <Compile Include="NoiseGenerator.cs" />
+    <Compile Include="NPC.cs" />
+    <Compile Include="NPCController.cs" />
+    <Compile Include="NPCDialogueResponse.cs" />
+    <Compile Include="NumberSprite.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="Objects\Boots.cs" />
+    <Compile Include="Objects\BreakableContainer.cs" />
+    <Compile Include="Objects\Cask.cs" />
+    <Compile Include="Objects\Chest.cs" />
+    <Compile Include="Objects\ColoredObject.cs" />
+    <Compile Include="Objects\CrabPot.cs" />
+    <Compile Include="Objects\Door.cs" />
+    <Compile Include="Objects\Furniture.cs" />
+    <Compile Include="Objects\Hat.cs" />
+    <Compile Include="Objects\ItemDescription.cs" />
+    <Compile Include="Objects\ObjectFactory.cs" />
+    <Compile Include="Objects\Ring.cs" />
+    <Compile Include="Objects\SpecialItem.cs" />
+    <Compile Include="Objects\SwitchFloor.cs" />
+    <Compile Include="Objects\TV.cs" />
+    <Compile Include="Objects\Wallpaper.cs" />
+    <Compile Include="Objects\WickedStatue.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="PathFindController.cs" />
+    <Compile Include="PathNode.cs" />
+    <Compile Include="Polygon.cs" />
+    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Projectiles\BasicProjectile.cs" />
+    <Compile Include="Projectiles\DebuffingProjectile.cs" />
+    <Compile Include="Projectiles\Projectile.cs" />
+    <Compile Include="Prop.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quests\CraftingQuest.cs" />
+    <Compile Include="Quests\FishingQuest.cs" />
+    <Compile Include="Quests\GoSomewhereQuest.cs" />
+    <Compile Include="Quests\ItemDeliveryQuest.cs" />
+    <Compile Include="Quests\ItemHarvestQuest.cs" />
+    <Compile Include="Quests\LostItemQuest.cs" />
+    <Compile Include="Quests\Quest.cs" />
+    <Compile Include="Quests\ResourceCollectionQuest.cs" />
+    <Compile Include="Quests\SlayMonsterQuest.cs" />
+    <Compile Include="Quests\SocializeQuest.cs" />
+    <Compile Include="Quests\WeedingQuest.cs" />
+    <Compile Include="RainDrop.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="Rumble.cs" />
+    <Compile Include="SafeAreaOverlay.cs" />
+    <Compile Include="SaveGame.cs" />
+    <Compile Include="SaveGameMeta.cs" />
+    <Compile Include="SchedulePathDescription.cs" />
+    <Compile Include="SeaMonsterTemporarySprite.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="Shed.cs" />
+    <Compile Include="ShippedItem.cs" />
+    <Compile Include="SlimeHutch.cs" />
+    <Compile Include="StartupPreferences.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="SteamHelper.cs" />
+    <Compile Include="TemporaryAnimatedSprite.cs" />
+    <Compile Include="TerrainFeatures\Bush.cs" />
+    <Compile Include="TerrainFeatures\CosmeticPlant.cs" />
+    <Compile Include="TerrainFeatures\DiggableWall.cs" />
+    <Compile Include="TerrainFeatures\Flooring.cs" />
+    <Compile Include="TerrainFeatures\FruitTree.cs" />
+    <Compile Include="TerrainFeatures\GiantCrop.cs" />
+    <Compile Include="TerrainFeatures\Grass.cs" />
+    <Compile Include="TerrainFeatures\HoeDirt.cs" />
+    <Compile Include="TerrainFeatures\LargeTerrainFeature.cs" />
+    <Compile Include="TerrainFeatures\Leaf.cs" />
+    <Compile Include="TerrainFeatures\Quartz.cs" />
+    <Compile Include="TerrainFeatures\ResourceClump.cs" />
+    <Compile Include="TerrainFeatures\Stalagmite.cs" />
+    <Compile Include="TerrainFeatures\TerrainFeature.cs" />
+    <Compile Include="TerrainFeatures\TerrainFeatureDescription.cs" />
+    <Compile Include="TerrainFeatures\TerrainFeatureFactory.cs" />
+    <Compile Include="TerrainFeatures\Tree.cs" />
+    <Compile Include="Tool.cs" />
+    <Compile Include="Tools\Axe.cs" />
+    <Compile Include="Tools\Blueprints.cs" />
+    <Compile Include="Tools\FishingRod.cs" />
+    <Compile Include="Tools\Hoe.cs" />
+    <Compile Include="Tools\Lantern.cs" />
+    <Compile Include="Tools\MagnifyingGlass.cs" />
+    <Compile Include="Tools\MeleeWeapon.cs" />
+    <Compile Include="Tools\MilkPail.cs" />
+    <Compile Include="Tools\Pan.cs" />
+    <Compile Include="Tools\Pickaxe.cs" />
+    <Compile Include="Tools\Raft.cs" />
+    <Compile Include="Tools\Seeds.cs" />
+    <Compile Include="Tools\Shears.cs" />
+    <Compile Include="Tools\Slingshot.cs" />
+    <Compile Include="Tools\Stackable.cs" />
+    <Compile Include="Tools\Sword.cs" />
+    <Compile Include="Tools\ToolDescription.cs" />
+    <Compile Include="Tools\ToolFactory.cs" />
+    <Compile Include="Tools\Wand.cs" />
+    <Compile Include="Tools\WateringCan.cs" />
+    <Compile Include="Torch.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Warp.cs" />
+    <Compile Include="WeatherDebris.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft.Xna.Framework.RuntimeProfile" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
